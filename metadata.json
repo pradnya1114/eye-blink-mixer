@@ -1,0 +1,7 @@
+{
+  "name": "Eye Blink Fruit Mixer",
+  "description": "A fun interactive game where you catch fruits by blinking and mix them by double-blinking using your webcam.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

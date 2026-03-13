@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eye Blink Fruit Mixer</title>
+    <!-- Tailwind via CDN for quick local setup without complex config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Fredoka', sans-serif;
+        overflow: hidden; /* Prevent scrolling during game */
+        touch-action: none;
+      }
+      .blob-shape {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        animation: morph 8s ease-in-out infinite;
+      }
+      @keyframes morph {
+        0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+        34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+        67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+      }
+      .shake {
+        animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both infinite;
+      }
+      @keyframes shake {
+        10%, 90% { transform: translate3d(-1px, 0, 0) rotate(-1deg); }
+        20%, 80% { transform: translate3d(2px, 0, 0) rotate(2deg); }
+        30%, 50%, 70% { transform: translate3d(-4px, 0, 0) rotate(-4deg); }
+        40%, 60% { transform: translate3d(4px, 0, 0) rotate(4deg); }
+      }
+      @keyframes swirl {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(15px, -15px) rotate(90deg); }
+        50% { transform: translate(0, -30px) rotate(180deg); }
+        75% { transform: translate(-15px, -15px) rotate(270deg); }
+        100% { transform: translate(0, 0) rotate(360deg); }
+      }
+      .swirl {
+        animation: swirl 0.6s linear infinite;
+      }
+    </style>
+
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@mediapipe/tasks-vision": "https://esm.sh/@mediapipe/tasks-vision@^0.10.22-rc.20250304",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-D8Px9mRE.js"></script>
+</head>
+  <body class="bg-amber-50 text-slate-900">
+    <div id="root"></div>
+    <!-- Point to the local source entry file -->
+  </body>
+</html>

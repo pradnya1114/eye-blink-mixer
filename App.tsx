@@ -116,7 +116,16 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="antialiased">
+    <div className="antialiased font-sans">
+      {/* Global Logo */}
+      <div className="fixed top-4 left-4 z-[100] pointer-events-none">
+        <img 
+          src="/logo.png" 
+          alt="Logo" 
+          className="w-14 h-14 md:w-32 md:h-32 drop-shadow-md"
+          referrerPolicy="no-referrer"
+        />
+      </div>
       {appState === AppState.HOME && <Welcome onStart={handleStartGame} leaderboard={leaderboard} />}
       {appState === AppState.GAME && <Game onGameOver={handleGameOver} />}
       {appState === AppState.RESULT && (

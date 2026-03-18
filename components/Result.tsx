@@ -170,7 +170,7 @@ const Result: React.FC<ResultProps> = ({ stats, leaderboard, onReplay, onHome })
   return (
     <div className={`min-h-screen flex flex-col items-center justify-center p-4 ${stats.wasBlasted ? 'bg-red-100' : 'bg-amber-50'} relative overflow-y-auto`}>
        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-10 left-10 text-4xl animate-bounce">🍎</div>
+          
           <div className="absolute top-10 right-20 text-4xl animate-bounce">🍇</div>
           <div className="absolute bottom-20 right-20 text-4xl animate-bounce delay-100">🍌</div>
           <div className="absolute bottom-20 left-10 text-4xl animate-bounce delay-200">🍓</div>

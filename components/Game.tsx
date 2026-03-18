@@ -500,14 +500,14 @@ const Game: React.FC<GameProps> = ({ onGameOver }) => {
         </div>
       </div>
 
-      {/* HUD: Score & Timer */}
-      <div className="absolute top-4 left-4 z-30 flex gap-4">
-        <div className="bg-white/90 backdrop-blur rounded-xl p-3 shadow-lg border-2 border-orange-100">
-          <p className="text-xs text-gray-500 font-bold uppercase">Score</p>
+      {/* HUD: Score & Timer - Shifted to Middle */}
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 flex gap-4">
+        <div className="bg-white/90 backdrop-blur rounded-xl p-3 shadow-lg border-2 border-orange-100 min-w-[80px] text-center">
+          <p className="text-[10px] text-gray-500 font-bold uppercase">Score</p>
           <p className="text-2xl font-bold text-orange-600">{score}</p>
         </div>
-        <div className={`bg-white/90 backdrop-blur rounded-xl p-3 shadow-lg border-2 ${timeLeft < 10 ? 'border-red-500 animate-pulse' : 'border-blue-100'}`}>
-          <p className="text-xs text-gray-500 font-bold uppercase">Time</p>
+        <div className={`bg-white/90 backdrop-blur rounded-xl p-3 shadow-lg border-2 min-w-[80px] text-center ${timeLeft < 10 ? 'border-red-500 animate-pulse' : 'border-blue-100'}`}>
+          <p className="text-[10px] text-gray-500 font-bold uppercase">Time</p>
           <p className={`text-2xl font-bold ${timeLeft < 10 ? 'text-red-600' : 'text-blue-600'}`}>
             {timeLeft}s
           </p>

@@ -120,7 +120,7 @@ const App: React.FC = () => {
       {/* Global Logo */}
       <div className="fixed top-4 left-4 z-[100] pointer-events-none">
         <img 
-          src="/logo.png" 
+          src="./logo.png" 
           alt="Logo" 
           className="w-14 h-14 md:w-32 md:h-32 drop-shadow-md"
           referrerPolicy="no-referrer"
